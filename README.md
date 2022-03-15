@@ -1,11 +1,11 @@
-#Infnet
+# Infnet
 
 Os alunos deverão desenvolver o código proposto utilizando TDD.
 
 O código deverá ser postado em repositório público.
 O trabalho deverá ser feito em grupos de 3 a 5 alunos.
 
-#Proposta
+# Proposta
 
 Deverá ser implementada uma calculadora conversora de medidas com as seguintes operações.
 
