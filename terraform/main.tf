@@ -1,8 +1,3 @@
-provider "aws" {
-  alias  = "virginia"
-  region = "us-east-1"
-}
-
 resource "aws_load_balancer_backend_server_policy" "load_balance" {
   provider           = "aws.virginia"
   instance_port      = 80
