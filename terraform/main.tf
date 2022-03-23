@@ -1,19 +1,14 @@
-resource "aws_load_balancer_backend_server_policy" "load_balance" {
-  provider           = "aws.virginia"
-  instance_port      = 80
-  load_balancer_name = "load_balance_dev"
-  depends_on         = [aws_instance.dev]
-}
-
 resource "aws_instance" "dev" {
-  provider      = "aws.virginia"
-  count         = 2
-  ami           = ""
+  provider      = aws.virginia
+  ami           = "ami-0c02fb55956c7d316"
   instance_type = "t2.micro"
   key_name      = "terraform-aws"
   tags          = {
-    Name  = "dev1"
+    Name  = "dev"
     Squad = "Cartões"
+  }
+  provisioner "local-exec" {
+    command = "echo Finished"
   }
   depends_on = [aws_dynamodb_table.dynamodb_table_read_target]
 }
